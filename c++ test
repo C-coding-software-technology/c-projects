@@ -1,0 +1,37 @@
+class Test {
+    int intValue;
+    std::string stringValue;
+
+    // Constructor
+    Test(int intValue, const std::string& stringValue) : intValue(intValue), stringValue(stringValue) {}
+
+    // Member function to set values
+    void setValues(int intValue, const std::string& stringValue) {
+        this->intValue = intValue;
+        this->stringValue = stringValue;
+    }
+
+    // Member function to display values
+    void displayValues() {
+        std::cout << "Integer Value: " << intValue << std::endl;
+        std::cout << "String Value: " << stringValue << std::endl;
+    }
+};
+
+int main() {
+    // Create an instance of the Test class
+    Test myTest(42, "Hello, C++!");
+
+    // Display initial values
+    std::cout << "Initial values:" << std::endl;
+    myTest.displayValues();
+
+    // Set new values
+    myTest.setValues(123, "Programming is fun!");
+
+    // Display updated values
+    std::cout << "\nUpdated values:" << std::endl;
+    myTest.displayValues();
+
+    return 0;
+}
